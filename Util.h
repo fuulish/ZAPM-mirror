@@ -262,7 +262,7 @@ shHeap<T>::insert (T item)
     int i;
 
     if (++this->mCount == this->mCapacity) {
-        grow (this->mCapacity * 2);
+        this->grow (this->mCapacity * 2);
     }
     i = this->mCount - 1;
     while (i > 0 && 
